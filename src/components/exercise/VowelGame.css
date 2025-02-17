@@ -1,0 +1,116 @@
+/* Overall Layout */
+.game-container {
+    background-color: #E6C8F5;
+    text-align: center;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Title & Subtitle */
+  .title {
+    font-size: 28px;
+    color: #4A2C6E;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #5F3A7B;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-button {
+    background-color: #B25FD8 !important;
+    color: white !important;
+    border-radius: 20px !important;
+    text-transform: none !important;
+    padding: 8px 15px !important;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 80%;
+    height: 8px !important;
+    background-color: #D6A9F3;
+    margin-bottom: 20px;
+  }
+  
+  /* Game Layout */
+  .game-area {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  
+  /* Word List */
+  .word-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .word-card {
+    background: white;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5F3A7B;
+    border: 2px solid #D6A9F3;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .word-card:hover {
+    background: #F1D4FF;
+  }
+  
+  .emoji {
+    margin-right: 8px;
+    font-size: 22px;
+  }
+  
+  .word-text {
+    flex-grow: 1;
+  }
+  
+  .play-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6A3F90;
+  }
+  
+  /* Basket */
+  .basket {
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    background: white;
+    border: 3px dashed #B25FD8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .emoji-display {
+    font-size: 50px;
+  }
+  

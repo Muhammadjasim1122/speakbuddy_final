@@ -1,0 +1,11 @@
+a {
+    text-decoration: none; /* Remove underline */
+  }
+  
+  a:hover {
+    text-decoration: none; /* Ensure it doesn't appear on hover */
+  }
+
+.no-color {
+  color: initial !important ;
+}

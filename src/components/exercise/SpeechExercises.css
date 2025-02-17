@@ -1,0 +1,238 @@
+/* FYP_LOGIN_TRY/src/components/exercise/SpeechExercises.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+  --primary-color:#7030a0;
+  --unlocked-bg: #d6f5d6;
+  --locked-bg: #f8d7da;
+  --button-bg: #4a4a4a;
+  --button-hover-bg: #333;
+  --text-color: #333;
+  --gradient-bg: linear-gradient(to right, #2575fc,#7030a0);
+  --gradient-heading: linear-gradient(to right, #2575fc,#7030a0,purple);
+}  
+.container-SpeechExe{
+  max-width: 100%;
+  padding: 20px;
+  background-image: url('../../assets/img/exeMenu.png'); /* Reference the image here */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: white; /* Change text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
+  border-radius: 10px; /* Rounded corners for the container */ 
+  min-height: 100vh;
+}
+.ExeCard-container{
+  max-width: 100%;
+  padding: 20px;
+  background-image: url('../../assets/img/bgVowelEX.png');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: white; /* Change text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
+  border-radius: 10px; /* Rounded corners for the container */ 
+  min-height: 100vh;
+}
+
+.container-SpeechExe h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  background: var(--gradient-heading);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.container-SpeechExe p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.level-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.level-card {
+  background: #ffffff; /* White background for cards */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  text-align: center;
+  transition: transform 0.3s, max-height 0.3s ease; /* Smooth transition for hover effect and submenu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: max-height 0.3s ease; /* Smooth transition for submenu */
+}
+
+.level-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.unlocked {
+  background-color: #e0ffe0;
+}
+
+.locked {
+  background-color: #ffe0e0;
+}
+
+.unlocked h2, .unlocked p,
+.locked h2, .locked p {
+  color: #333;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button {
+  padding: 10px 20px; /* Increase padding for buttons */
+  margin-top: 10px;
+  background: var(--gradient-bg);
+  color: white;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+  background: #2575fc;
+}
+
+.button.locked {
+  background: var(--button-bg);
+}
+
+.button.locked:hover {
+  background: var(--button-hover-bg);
+}
+
+.button .svg-inline--fa {
+  margin-right: 5px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px; /* Space above the back link */
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: underline; /* Underline for emphasis */
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container-SpeechExe {
+    padding: 10px;
+  }
+  .level-card {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+.disabled {
+  pointer-events: none; /* Prevents clicking */
+  opacity: 0.6; /* Makes the button look disabled */
+  cursor: not-allowed; /* Changes the cursor to indicate it's not clickable */
+}
+
+/* Submenu Styles */
+.submenu {
+  display: block; /* Ensure it can be displayed */
+  margin-top: 10px; /* Space above the submenu */
+  padding: 10px; /* Padding around the submenu */
+  background-color: #f9fafb; /* Light background color for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Individual List Item Styles */
+.submenu li {
+  list-style: none;
+  padding: 10px; /* Padding inside each list item */
+  background-color: #ffffff; /* White background for list items */
+  border-radius: 5px; /* Rounded corners for list items */
+  color: var(--primary-color); /* Dark text color for visibility */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for List Items */
+.submenu li:hover {
+  background-color: #e0e7ff; /* Light blue background on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Dropdown Toggle Styles */
+.dropdown-toggle {
+  appearance: none; 
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  color: #7030a0; /* Color to match your theme */
+  margin-left: 10px; /* Space between title and arrow */
+  transition: transform 0.3s ease; /* Smooth rotation transition */
+}
+
+.text-center {
+  text-align: center; /* Center text */
+}
+
+.button.btn-primary {
+  background-color: #7030a0; /* Primary button color */
+  color: white; /* Text color */
+}
+
+.button.btn-primary:hover {
+  background-color: #5a2480; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button.btn-secondary {
+  background-color: #e0e0e0; /* Secondary button color */
+  color: #333; /* Text color */
+}
+
+.button.btn-secondary:hover {
+  background-color: #d0d0d0; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.dropdown-toggle::after {
+  display: none !important; /* Hides Bootstrap's default arrow */
+}
+
+/* Topic Number Styles */
+.topic-number {
+  font-weight: bold; /* Make the topic number bold */
+  color: var(--primary-color); /* Dark color for visibility */
+  width: 30px; /* Fixed width for alignment */
+}
+
+/* Topic Name Styles */
+.topic-name {
+  flex-grow: 1; /* Allow the topic name to take up remaining space */
+  padding-left: 10px; /* Space between number and name */
+  color: var(--primary-color); /* Dark text color for visibility */
+}
+
+/* Topic Icon Styles */
+.topic-icon {
+  margin-left: 10px; /* Space between topic name and icon */
+  font-size: 1.2rem; /* Adjust icon size if needed */
+}
+
+
+
+

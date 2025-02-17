@@ -1,0 +1,157 @@
+/* Menu Option Container */
+.menu-option {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-option:hover {
+  transform: scale(1.05);
+}
+
+/* Circle Button Style */
+.circle-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid var(--logo-color);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(112, 48, 160, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.circle-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(112, 48, 160, 0.2);
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.circle-container:hover .circle-image {
+  transform: scale(1.1);
+}
+
+/* Menu Option Text */
+.menu-option-text {
+  color: var(--logo-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+.menu-option:hover .menu-option-text {
+  transform: translateY(-3px);
+  text-shadow: 2px 2px 4px rgba(112, 48, 160, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circle-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .menu-option-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .menu-option-text {
+    font-size: 1rem;
+  }
+}
+/* Floating Letters Animation */
+.floating-letters {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.letter {
+  position: absolute;
+  color: var(--logo-color);
+  opacity: 0.2;
+  font-size: 2.8rem;
+  animation: floatLetter 15s linear infinite;
+  text-shadow: 2px 2px 4px rgba(112, 48, 160, 0.3);
+  font-weight: bold;
+}
+
+.letter.word {
+  font-size: 3.2rem;
+  opacity: 0.25;
+  font-weight: 600;
+}
+
+/* English Letters */
+.letter-en {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Urdu Letters */
+.letter-ur {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 3.5rem;
+}
+
+.letter-ur.word {
+  font-size: 4rem;
+}
+
+@keyframes floatLetter {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.25;
+    transform: translate(var(--moveX), var(--moveY)) rotate(90deg) scale(1);
+  }
+  80% {
+    opacity: 0.25;
+    transform: translate(calc(var(--moveX) * 2), calc(var(--moveY) * 2)) rotate(270deg) scale(1.2);
+  }
+  100% {
+    transform: translate(var(--moveX), var(--moveY)) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .letter {
+    font-size: 2rem; /* Reduce size */
+    opacity: 0.1;
+  }
+
+  .floating-letters {
+    height: 90vh; /* Adjust height */
+  }
+}
